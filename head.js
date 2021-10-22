@@ -8,8 +8,13 @@ const assertEqual = function (actual, expected) {
 };
 
 function head(array) {
-  let firstItem = array.slice(1);
-  return firstItem;
+  if (array.length >= 1) {
+    return array[0];
+    console.log(array[0]);
+
+  } else if (array.length = 0) {
+    console.log("undefined");
+  }
 }
 assertEqual(1, 1);
 assertEqual(head([5, 6, 7]), 5);
