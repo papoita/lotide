@@ -26,8 +26,14 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 //assertEqual(result.length, 2);
 
 //test case 2 an array with one element
+const result1 = tail(["hello"]);
+console.log(result1.length);
+assertEqual(result1.length, 0);
 
-
+//test case 3 an empty array
+const result2 = tail([]);
+console.log(result2.length);
+assertEqual(result2.length, 0);
 /*
 
 //notes on how to fix error of undefined const, this will show you were the error is and ultimatelly how to fix it.
