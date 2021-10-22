@@ -21,6 +21,7 @@ assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 assertEqual(head([]), "hmm");
 
+
 /*
 scenario handling
 An array with only one element should still yield that one element as its head
