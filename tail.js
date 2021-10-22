@@ -12,8 +12,7 @@ const tail = function (array) {
   let newArray = array.slice(1);
   console.log(newArray.length);
   return newArray;
-
-}
+};
 // Test Case 1: Check the returned array elements
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
