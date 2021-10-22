@@ -24,23 +24,18 @@ assertEqual(result.length, 2); // ensure we get back two elements
 assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 //assertEqual(result.length, 2);
+
+//test case 2 an array with one element
+
+
 /*
-//notes on how to fix error of undefined const
+
+//notes on how to fix error of undefined const, this will show you were the error is and ultimatelly how to fix it.
+
 const foo = undefined;
 foo.bar
- // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
-
-// Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
 assertEqual(words.length, 3); // original array should still have 3 elements!
-
-
-
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
 */
