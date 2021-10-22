@@ -9,17 +9,22 @@ const assertEqual = function (actual, expected) {
 
 
 function tail(array) {
-  let newArray = slice.array(1);
-  console.log(newArray);
+  let newArray = array.slice(1);
+  return newArray;
+  console.log(newArray.length);
 }
-
 // Test Case 1: Check the returned array elements
+tail(["Hello", "Lighthouse", "Labs"]);
 const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
+assertEqual(result.length, 2);
+/*
+
+
+ // ensure we get back two elements
 assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
-/*
+
 // Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
