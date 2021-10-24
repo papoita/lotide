@@ -3,17 +3,23 @@
 //is several nests it is called recursion
 
 function flatten(elements) {
-  const flatArray = [];
+  let flatArray = [];
   for (let i = 0; i < elements.length; i++) {
     if (Array.isArray(elements[i])) {
+      flatArray = flatArray.concat(flatten(elements[i]));
+    } else {
       flatArray.push(elements[i]);
-      console.log(flatArray);
-
     }
-  } return flatArray;
+  }
+  console.log(flatArray);
+  return flatArray;
 }
+//test
+flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
 //typeof returns objects
 //Array.isArray
+//or let flatArray = [].concat.apply([], arr);
+//recursive solution
 function assertArraysEqual(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
@@ -25,6 +31,7 @@ function assertArraysEqual(array1, array2) {
   return true;
 }
 
+
 function eqArrays(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
@@ -33,5 +40,3 @@ function eqArrays(array1, array2) {
   }
   return true;
 }
-//test
-flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
