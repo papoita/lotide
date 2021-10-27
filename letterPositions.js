@@ -2,47 +2,51 @@
 
 //testing functions
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
+function assertArraysEqual(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      console.log(`❌ [${array1}] is different to [${array2}]`);
+      return false;
+    }
   }
-  else if (actual !== expected) {
-    console.log(`❌ Assertion failed: [${actual}] !== [${expected}]`);
+  console.log(`✅ [${array1}] is the same to [${array2}]`);
+  return true;
+}
+
+function eqArrays(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false
+    }
   }
-};
+  return true;
+}
+
+//actual function letter positions
+
 
 
 const letterPositions = function (sentence) {
   //let lowerCaseSentence = sentence.toLowerCase;
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
-    const item = sentence[i];
-    if (!results[item]) {
-      results[item] = [i];
-    } else {
-      results[item].push(i);
+    if (sentence[i] !== " ") {
+      const item = sentence[i];
+
+      if (!results[item]) {
+        results[item] = [i];
+      } else {
+        results[item].push(i);
+      }
     }
   }
+
   return results;
 };
 console.log(letterPositions("lighthouse in the house"));
 
-const letterPositions2 = function (sentence) {
-  const results = {};
-  const sentenceArray = sentence.split("");
-  console.log("+++++", sentenceArray);
-  for (const character, i in sentenceArray) { //shows the index vs for that shows the value
-    console.log("--", character);
-    if (!results[character]) {
-      results[character] = [i];
-    } else {
-      results[character].push(i);
-    }
-  }
-  console.log("for inloop", results);
-  return results;
-}
-letterPositions2("what is you name");
+console.log(letterPositions("hello"));
+assertArraysEqual(letterPositions("hello").e, [1]);
 
 
 //console.log(letterPositions("hello"));
