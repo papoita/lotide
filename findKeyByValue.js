@@ -25,12 +25,15 @@ const findKeyByValue = function (object, value) {
     if (object[key] === value) {
       console.log(`${key}`)
       return key;
+    } else {
+      console.log("undefined");
+      return undefined;
     }
   }
-  return undefined;
+  //return undefined;
 };
 
-findKeyByValue(bestTVShowsByGenre, "The Wire");
+findKeyByValue(bestTVShowsByGenre, "Theyss Wire");
 //tests
 
 /*
