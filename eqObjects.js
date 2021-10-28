@@ -8,6 +8,9 @@ const assertEqual = function (actual, expected) {
 };
 
 function eqArrays(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false
@@ -31,19 +34,36 @@ const eqObjects = function (object1, object2) {
     return false;
   }
   //console.log(object1["keys"]);
-  for (const item of object1) {
+  // for of //value in the array, doesn't work for objs because the word is not there vs the index[0]
+  for (const item in object1) { //gives the index of array or key object
     //console.log(item);
     //console.log(object1[item]);
-    if (object1[item] !== object2[item]) {
+    if (Array.isArray(object1[item])) {
+      if (!eqArrays(object1[item], object2[item])) {
+        return false;
+      }
+    } else if (object1[item] !== object2[item]) {
       return false;
     }
   } return true;
 };
 
-//testing
+//testing arrays as values
+
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-console.log(assertEqual(eqObjects(cd, dc))); // => true
+console.log(eqObjects(cd, dc)); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(assertEqual(eqObjects(cd, cd2))); // => false
+console.log(eqObjects(cd, cd2)); // => false
+/*
+//testing primitives as value test
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+eqObjects(ab, ba); // => true
+
+const abc = { a: "1", b: "2", c: "3" };
+eqObjects(ab, abc); // => false
+
+
+*/
