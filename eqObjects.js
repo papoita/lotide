@@ -7,6 +7,16 @@ const assertEqual = function (actual, expected) {
   }
 };
 
+function eqArrays(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false
+    }
+  }
+  return true;
+}
+
+
 //actual function
 //takes in 2 objects
 //returns true false on perfect match ===
@@ -33,7 +43,7 @@ const eqObjects = function (object1, object2) {
 //testing
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
+console.log(assertEqual(eqObjects(cd, dc))); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
+console.log(assertEqual(eqObjects(cd, cd2))); // => false
