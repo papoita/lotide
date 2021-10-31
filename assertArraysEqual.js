@@ -14,17 +14,14 @@ function eqArrays(array1, array2) {
 }
 
 function assertArraysEqual(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      console.log(`❌ [${array1}] is different to [${array2}]`);
-      return false;
-    }
+  if (eqArrays(array1, array2)) {
+    console.log(`✅ [${array1}] is the same to [${array2}]`);
+    return true;
+  } else {
+    console.log(`❌ [${array1}] is different to [${array2}]`);
+    return false;
   }
-  console.log(`✅ [${array1}] is the same to [${array2}]`);
-  return true;
 }
-
-
 
 /*
 
