@@ -20,20 +20,20 @@ console.log(result1);
 */
 
 //test functions
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
-      return false
+      return false;
     }
   }
   return true;
-}
+};
 
 
-function assertArraysEqual(array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅ [${array1}] is the same to [${array2}]`);
     return true;
@@ -41,7 +41,7 @@ function assertArraysEqual(array1, array2) {
     console.log(`❌ [${array1}] is different to [${array2}]`);
     return false;
   }
-}
+};
 
 
 
@@ -49,16 +49,16 @@ function assertArraysEqual(array1, array2) {
 const words = ["ground", "control", "to", "major", "tom"];
 
 const num = [1, 2, 3];
-const none = [];
 
-const map = function (array, callback) {
+
+const map = function(array, callback) {
 
   const results = [];
   for (let item of array) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 
 const result1 = map(words, word => word[0]);
@@ -69,5 +69,6 @@ const result2 = map(num, num => num * 10);
 
 assertArraysEqual(result2, [10, 20, 30, 40, 50]);
 
-const result3 = map(none, none => { none = none.concat("hello") });
-assertArraysEqual(result3, ["hello"]);
+const result3 = map(num, num => num + 2
+);
+assertArraysEqual(result3, [3, 4, 5]);
