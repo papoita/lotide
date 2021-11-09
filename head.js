@@ -1,11 +1,4 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
-  }
-  else if (actual !== expected) {
-    console.log(`❌ Assertion failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 function head(array) {
   if (array.length >= 1) {
@@ -16,12 +9,8 @@ function head(array) {
     console.log("undefined");
   }
 }
-assertEqual(1, 1);
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]), "hmm");
 
-
+module.exports = head;
 /*
 scenario handling
 An array with only one element should still yield that one element as its head
