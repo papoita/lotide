@@ -1,14 +1,8 @@
+const assertEqual = require('./assertEqual');
+
 //It will help us search for a key on an object where its value matches a given value.
 
-//Test functions
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else if (actual !== expected) {
-    console.log(`❌ Assertion failed: [${actual}] !== [${expected}]`);
-  }
-};
 
 //Actual function findKeyValue
 //inpu object and value
@@ -19,7 +13,7 @@ const bestTVShowsByGenre = {
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };
-const findKeyByValue = function (object, value) {
+const findKeyByValue = function(object, value) {
   for (const key in object) {
     if (object[key] === value) {
       console.log(`${key}`);
