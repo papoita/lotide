@@ -1,14 +1,4 @@
-
-//testing functions
-
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
-  }
-  else if (actual !== expected) {
-    console.log(`❌ Assertion failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //function countLetters
 //input a string
@@ -34,7 +24,7 @@ const countLetters = function (words) {
 countLetters('I am Paola Perez');
 */
 
-const countLetters = function (words) {
+const countLetters = function(words) {
   const results = {};
   for (const letter of words) {//each letter in the allItems array
     if (letter !== " ") {
@@ -48,9 +38,14 @@ const countLetters = function (words) {
   }
   console.log(results);
   return results;
-}
+};
 
 const test1 = countLetters('I am Paola Perez');
+const test2 = countLetters("hi");
 
-assertEqual(test1["a"], [4])
-assertEqual(test1["P"], [2])//fix to lower case
+assertEqual(test2["h"], 1);
+assertEqual(test1["a"], 4);
+assertEqual(test1["a"], 3);
+assertEqual(test1["P"], 2);//fix to lower case
+assertEqual(test1["p"], 2);//fix to lower case
+//eslint
