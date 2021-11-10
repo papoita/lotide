@@ -1,24 +1,5 @@
-const eqArrays = require('./eqArrays');
 
-const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length) {
-    return false;
-  }
-  //console.log(object1["keys"]);
-  // for of //value in the array, doesn't work for objs because the word is not there vs the index[0]
-  for (const item in object1) { //gives the index of array or key object
-    //console.log(item);
-    //console.log(object1[item]);
-    if (Array.isArray(object1[item])) {
-      if (!eqArrays(object1[item], object2[item])) {
-        return false;
-      }
-    } else if (object1[item] !== object2[item]) {
-      return false;
-    }
-  } return true;
-};
-
+const eqObjects = require("./eqObjects");
 
 
 const assertObjectsEqual = function(object1, object2) {
@@ -39,3 +20,4 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 console.log(assertObjectsEqual(cd, cd2)); // => false
 
 //console.log(`Example label: ${inspect(object1)}`);
+//linted
