@@ -20,3 +20,5 @@ assertEqual(result1.length, 0);
 const result2 = tail([]);
 //console.log(result2.length);
 assertEqual(result2.length, 0);
+
+//linted
