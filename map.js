@@ -1,4 +1,5 @@
 
+const assertArraysEqual = require('./assertArraysEqual');
 /*
 //Debug friednly code that allows to see each step of the map function
 
@@ -19,29 +20,6 @@ const result1 = map(words, word => word[0]);
 console.log(result1);
 */
 
-//test functions
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅ [${array1}] is the same to [${array2}]`);
-    return true;
-  } else {
-    console.log(`❌ [${array1}] is different to [${array2}]`);
-    return false;
-  }
-};
 
 
 
@@ -72,3 +50,5 @@ assertArraysEqual(result2, [10, 20, 30, 40, 50]);
 const result3 = map(num, num => num + 2
 );
 assertArraysEqual(result3, [3, 4, 5]);
+
+module.exports = map;
