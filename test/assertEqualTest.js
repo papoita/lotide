@@ -4,3 +4,4 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual(2, 5);
 assertEqual(true, false);
+//linted
