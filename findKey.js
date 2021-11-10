@@ -87,3 +87,5 @@ let result1 = (findKey({
 //}
 
 assertArraysEqual(result1, "noma");
+module.exports = findKey;
+//linted
