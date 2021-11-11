@@ -1,7 +1,6 @@
 const assertEqual = require('../assertEqual');
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(2, 5);
-assertEqual(true, false);
-//linted
+
+assertEqual("Lighthouse Labs", "Bootcamp"); //returns false if values are diffent
+assertEqual(1, 1); //returns true if values are the same
+assertEqual(2, 5);//returns false if values are diffent
+assertEqual(true, false);//returns true if values are the same
