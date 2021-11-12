@@ -1,7 +1,7 @@
 {
-	"name": "lotide",
-	"version": "1.0.0",
-	"description": "(@papoita)[https://github.com/papoita/lotide] | ver 1.0.1 # Lotide",
+	"name": "@papoita/lotide",
+	"version": "1.0.1",
+	"description": "Lotide Project 1 Lighthous Labs Bootcamp for Web Development",
 	"main": "index.js",
 	"directories": {
 		"test": "test"
@@ -14,7 +14,7 @@
 		"url": "git+https://github.com/papoita/lotide.git"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Paola Perez Leiva",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/papoita/lotide/issues"
