@@ -1,16 +1,11 @@
 const eqArrays = require("./eqArrays");
 
-
+//DESCRIPTION
 //actual function
 //takes in 2 objects
 //returns true false on perfect match ===
 
-//Object.keys(ab); //returns [a,b]
-//Object.values(object1); //returns ["2", "1"]
-
-
-
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
@@ -29,24 +24,8 @@ const eqObjects = function (object1, object2) {
   } return true;
 };
 
-//testing arrays as values
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
+//Object.keys(ab); //returns [a,b]
+//Object.values(object1); //returns ["2", "1"]
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
-/*
-//testing primitives as value test
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
-
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
-
-
-*/
-//eslint
 module.exports = eqObjects;
