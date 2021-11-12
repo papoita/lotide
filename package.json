@@ -1,6 +1,6 @@
 {
 	"name": "@papoita/lotide",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Lotide Project 1 Lighthous Labs Bootcamp for Web Development",
 	"main": "index.js",
 	"directories": {
