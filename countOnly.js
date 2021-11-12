@@ -1,15 +1,5 @@
 
-
-//testing functions
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else if (actual !== expected) {
-    console.log(`❌ Assertion failed: [${actual}] !== [${expected}]`);
-  }
-};
-
+//DESCRIPTION
 //countOnly function
 //input collection of items
 //define which items to count and ignore the others
@@ -36,30 +26,4 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
-
-
-//Test cases
-const allItems = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(allItems, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-//test countOnly
-
-
-//test using assertations
-assertEqual(result1.Jason, 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
-
-//eslint
 module.exports = countOnly;
