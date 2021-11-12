@@ -1,4 +1,4 @@
-(@papoita)[https://github.com/papoita/lotide] | ver 1.0.0
+(@papoita)[https://github.com/papoita/lotide] | ver 1.0.1
 # Lotide
 
 A mini clone of the [Lodash](https://lodash.com) library.
