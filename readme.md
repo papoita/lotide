@@ -35,6 +35,10 @@ The following functions are currently implemented:
 * `function eqArrays`: takes in 2 arrays and returns true if the arrays are equal and false otherwise.
 * `function eqObjects`: takes in 2 objects and return true if they are equal and false otherwise.
 * `function findKey`: takes in an object and callback and returns the first key that meets the criteria specified in callback.
+* `function flatten`: takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
+* `function head`: takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
+* `function letterPositions`: takes in a string and returns all indices of letter positions in the string.
+* `function map`: takes in an array and a callback and returns a new array based on the results of the callback on each item in the array.
 
 
 ### Tests
@@ -47,3 +51,4 @@ The following functions are currently implemented:
 * `function eqArraysTest`: test cases for function eqArrays.
 * `function eqObjectsTest`: test cases for function eqObjects.
 * `function findKeyTest`: test cases for function findKey.
+* `function headTest`: test cases for function head.
