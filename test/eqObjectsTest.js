@@ -1,5 +1,9 @@
 /** @format */
-
+/**
+ * input object
+ * input function eqObjects
+ * return boolean
+ */
 const eqObjects = require("../eqObjects");
 
 const cd = { c: "1", d: ["2", 3] };

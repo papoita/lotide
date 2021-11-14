@@ -1,5 +1,8 @@
 /** @format */
-
+/**
+ * input values
+ * return boolean true if equal
+ */
 const assertEqual = require("../assertEqual");
 
 assertEqual("Lighthouse Labs", "Bootcamp"); //returns false if values are diffent

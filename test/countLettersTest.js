@@ -1,5 +1,9 @@
 /** @format */
-
+/**
+ * input string and element
+ * compare using function assertEqual
+ * return boolean true if equal
+ */
 const assertEqual = require("../assertEqual");
 const countLetters = require("../countLetters");
 

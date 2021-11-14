@@ -1,5 +1,8 @@
 /** @format */
-
+/**
+ * input object
+ * return boolean true if equal
+ */
 const assertObjectsEqual = require("../assertObjectsEqual");
 
 const cd = { c: "1", d: ["2", 3] };
