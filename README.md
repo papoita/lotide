@@ -1,6 +1,6 @@
 <!-- @format -->
 
-(@papoita)[https://github.com/papoita/lotide] | ver 1.0.2
+(@papoita)[https://github.com/papoita/lotide] | ver 1.1.2
 
 # Lotide
 
